@@ -1,7 +1,12 @@
-import { platformBrowser } from '@angular/platform-browser';
-import { AppModule } from './app/app-module';
+import { platformBrowser, BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 
-platformBrowser().bootstrapModule(AppModule, {
-  
+import { provideBrowserGlobalErrorListeners, importProvidersFrom } from '@angular/core';
+import { App } from './app/app';
+
+bootstrapApplication(App, {
+    providers: [
+        importProvidersFrom(BrowserModule),
+        provideBrowserGlobalErrorListeners()
+    ]
 })
   .catch(err => console.error(err));
