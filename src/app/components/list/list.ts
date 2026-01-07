@@ -2,12 +2,11 @@ import {Component} from '@angular/core';
 import {SideBar} from '../shared/side-bar/side-bar';
 
 @Component({
-  selector: 'home',
+  selector: 'list',
   template: `
     <side-bar></side-bar>
     <div class="text">
-      <p>Rien à afficher pour le moment</p>
-      <p>Sélectionne une section à afficher dans le menu</p>
+      <p>list works !</p>
     </div>
   `,
   styles: `
@@ -20,20 +19,11 @@ import {SideBar} from '../shared/side-bar/side-bar';
 
     .text {
       width: 100%;
-      display: flex;
-      gap: 1rem;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      :first-child {
-        font-size: 3rem;
-      }
     }
   `,
   imports: [
     SideBar
   ]
 })
-export class Home {
+export class List {
 }
