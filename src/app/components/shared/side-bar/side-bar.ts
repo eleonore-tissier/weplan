@@ -32,6 +32,10 @@ import {list} from 'postcss';
         border-radius: 5px;
         background: linear-gradient(0.25turn, white, #C8FABA);
       }
+
+      a:hover {
+        background: linear-gradient(0.25turn, white, 75%, #C8FABA);
+      }
     }
 
   `,
