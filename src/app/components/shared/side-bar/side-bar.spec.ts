@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideBarPage } from './side-bar-page';
+import { SideBar } from './side-bar';
 
 describe('SideBar', () => {
-  let component: SideBarPage;
-  let fixture: ComponentFixture<SideBarPage>;
+  let component: SideBar;
+  let fixture: ComponentFixture<SideBar>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SideBarPage]
+      declarations: [SideBar]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SideBarPage);
+    fixture = TestBed.createComponent(SideBar);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

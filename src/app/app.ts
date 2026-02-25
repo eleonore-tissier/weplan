@@ -1,16 +1,16 @@
 import { Component, signal } from '@angular/core';
-import {RouterOutlet} from '@angular/router';
-import {SideBarPage} from './components/shared/side-bar/pages/side-bar-page/side-bar-page';
+import {RouterModule, RouterOutlet} from '@angular/router';
+import {Home} from './components/home/home';
 
 @Component({
   selector: 'weplan-root',
-  imports: [RouterOutlet, SideBarPage],
-  template: `<side-bar-page></side-bar-page> <router-outlet></router-outlet> `,
+  imports: [RouterOutlet, RouterModule, Home],
+  standalone: true,
+  template: ` <router-outlet></router-outlet> `,
   styles: [
     `
       :host {
-        display: flex;
-        gap: 1rem;
+        display: block;
         height: 100%;
       }
     `,

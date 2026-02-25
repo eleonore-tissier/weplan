@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./components/home/home').then(m => m.Home),
   },
   {
     path: 'timetable',
+    loadComponent: () => import('./components/timetable/timetable').then(m => m.Timetable),
   },
   {
     path: 'list',
+    loadComponent: () => import('./components/list/list').then(m => m.List),
   },
   {
     path: '**',
